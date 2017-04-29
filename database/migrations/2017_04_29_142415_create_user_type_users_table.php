@@ -5,7 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateUserTypeUsersTable extends Migration
 {
-
+   //Pedro César
 	/**
 	 * Run the migrations.
 	 *
