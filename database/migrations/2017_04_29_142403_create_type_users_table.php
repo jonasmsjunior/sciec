@@ -8,9 +8,10 @@ class CreateTypeUsersTable extends Migration
 
 	/**
 	 * Run the migrations.
-	 *
+	 * hueheuheuheuehuehuehuehueheuheuheueh
 	 * @return void
 	 */
+	//Marques
 	public function up()
 	{
 		Schema::create('type_users', function(Blueprint $table) {
