@@ -43,3 +43,4 @@ $factory->define(App\Entities\TypeUser::class, function (Faker\Generator $faker)
 });
 
 //legal
+
