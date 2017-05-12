@@ -15,14 +15,14 @@ class CreateUserEventsTable extends Migration
 	{
 		Schema::create('user_events', function(Blueprint $table) {
 
-           // $table->integer('id_user')->unsigned();
-          //  $table->foreign('id_user')->references('id')->on('users');
+            $table->integer('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('users');
 
-//            $table->integer('id_events')->unsigned();
-//            $table->foreign('id_events')->references('id')->on('events');
+            $table->integer('id_events')->unsigned();
+            $table->foreign('id_events')->references('id')->on('events');
 
-           // $table->integer('id_participation')->unsigned();
-          //  $table->foreign('id_participation')->references('id')->on('participations');
+            $table->integer('id_participation')->unsigned();
+            $table->foreign('id_participation')->references('id')->on('participations');
 
             $table->boolean('status');
 
