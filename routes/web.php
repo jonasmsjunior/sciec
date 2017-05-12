@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('usuario', 'UsersController@index');
+
+
+Route::get('teste', function () {
+    return \App\Entities\User::all();
+});
