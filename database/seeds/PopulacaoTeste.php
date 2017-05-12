@@ -33,9 +33,9 @@ class PopulacaoTeste extends Seeder
         factory(App\Entities\Course::class,10)->create();
 
       // Erro nessa dois
-      //  factory(App\Entities\CourseEvents::class,5)->create();
+        factory(App\Entities\CourseEvents::class,5)->create();
 
-      //  factory(App\Entities\UserEvent::class,5)->create();
+        factory(App\Entities\UserEvent::class,5)->create();
 
     }
 }
