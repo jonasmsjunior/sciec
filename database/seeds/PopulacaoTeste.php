@@ -28,11 +28,15 @@ class PopulacaoTeste extends Seeder
         //romulo
         factory(App\Entities\Article::class,100)->create();
         factory(App\Entities\Participation::class,100)->create();
-        factory(App\Entities\UserEvent::class,100)->create();
         //alvaro
         factory(App\Entities\Instution::class,10)->create();
         factory(App\Entities\Course::class,10)->create();
-        factory(App\Entities\CourseEvents::class,10)->create();
+
+      // Erro nessa dois
+      //  factory(App\Entities\CourseEvents::class,5)->create();
+
+      //  factory(App\Entities\UserEvent::class,5)->create();
+
     }
 }
 

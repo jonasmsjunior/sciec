@@ -17,9 +17,13 @@ $factory->define(App\Entities\User::class, function (Faker\Generator $faker) {
 
     return [
         'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
+        'cpf'  => $faker->unique()->numberBetween(1,999999999),
+        'email' => $faker->unique()->safeEmail,
+        'telefone' => $faker->phoneNumber,
         'remember_token' => str_random(10),
+        'status'=> $faker->boolean,
+
     ];
 });
 
@@ -39,6 +43,7 @@ $factory->define(App\Entities\TypeUser::class, function (Faker\Generator $faker)
     return [
         'status' => $faker->boolean,
         'nome' => $faker->sentence,
+        'descricao' => $faker->sentence,
     ];
 });
 
@@ -161,9 +166,11 @@ $factory->define(App\Entities\Participation::class, function (Faker\Generator $f
 
 $factory->define(App\Entities\UserEvent::class, function (Faker\Generator $faker) {
 
-
     return [
-
+        'id_users' => $faker->numberBetween(1,100),
+        'id_evento'=> $faker->numberBetween(0,100),
+        'id_articles' => $faker->numberBetween(0,100),
+        'id_participation' => $faker->numberBetween(0,100),
         'status' => $faker->boolean,
     ];
 });// romulo
@@ -188,7 +195,7 @@ $factory->define(App\Entities\Course::class, function (Faker\Generator $faker) {
         'descricao' => $faker->sentence,
         'status' => $faker->boolean,
         'telefone' => $faker->phoneNumber,
-        'id_instutions' => $faker->numberBetween(1,10),
+        'id_instutions' => $faker->numberBetween(0,10),
     ];
 });
 
@@ -196,8 +203,8 @@ $factory->define(App\Entities\CourseEvents::class, function (Faker\Generator $fa
 
 
     return [
-         'id_cursos' => $faker->numberBetween(1,100),
-         'id_eventos' => $faker->numberBetween(1,5),
+         'id_cursos' => $faker->numberBetween(0,10),
+         'id_eventos' => $faker->numberBetween(0,5),
     ];
 });//alvaro
 

@@ -14,7 +14,6 @@ class CreateCourseEventsTable extends Migration
 	public function up()
 	{
 		Schema::create('course_events', function(Blueprint $table) {
-           $table->increments('id');
            $table->integer('id_cursos')->unsigned();
            $table->foreign('id_cursos')->references('id')->on('courses');
            $table->integer('id_eventos')->unsigned();
