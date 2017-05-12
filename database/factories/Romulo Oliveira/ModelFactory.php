@@ -14,7 +14,7 @@
 
 
 /* ROMULO*/
-$factory->define(App\Entities\Articles::class, function (Faker\Generator $faker) {
+$factory->define(App\Entities\Article::class, function (Faker\Generator $faker) {
 
 
     return [
@@ -38,7 +38,7 @@ $factory->define(App\Entities\Participation::class, function (Faker\Generator $f
     ];
 });
 
-$factory->define(App\Entities\UsersEvents::class, function (Faker\Generator $faker) {
+$factory->define(App\Entities\UserEvent::class, function (Faker\Generator $faker) {
 
 
     return [

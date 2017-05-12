@@ -13,8 +13,8 @@ class RomuloSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
         /* RÔMULO*/
-        factory(App\Entities\Articles::class,100)->create();
+        factory(App\Entities\Article::class,100)->create();
         factory(App\Entities\Participation::class,100)->create();
-        factory(App\Entities\UsersEvents::class,100)->create();
+        factory(App\Entities\UserEvent::class,100)->create();
     }
 }

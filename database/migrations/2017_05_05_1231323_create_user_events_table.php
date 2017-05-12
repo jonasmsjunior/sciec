@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersEventsTable extends Migration
+class CreateUserEventsTable extends Migration
 {
 
 	/**
@@ -13,7 +13,7 @@ class CreateUsersEventsTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('users_events', function(Blueprint $table) {
+		Schema::create('user_events', function(Blueprint $table) {
 
            // $table->integer('id_user')->unsigned();
           //  $table->foreign('id_user')->references('id')->on('users');
@@ -48,7 +48,7 @@ class CreateUsersEventsTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('users_events');
+		Schema::drop('user_events');
 	}
 
 }
