@@ -1,4 +1,4 @@
-<?php
+cd<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('usuario', 'UsersController@index');
+Route::get('usuario', 'UsersController@index');// feito
+Route::post('usuario', 'UsersController@store');//fazendo
+Route::get('usuario/{id}', 'UsersController@show');//feito
+Route::delete('usuario/{id}', 'UsersController@destroy');
+Route::get('usuario', 'UsersController@edit');
+Route::put('usuario/{id}', 'UsersController@update');
 
 
-Route::get('teste', function () {
-    return \App\Entities\User::all();
-});
+
