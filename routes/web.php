@@ -15,12 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('usuario', 'UsersController@index');// feito
-Route::post('usuario', 'UsersController@store');//fazendo
-Route::get('usuario/{id}', 'UsersController@show');//feito
-Route::delete('usuario/{id}', 'UsersController@destroy');
-Route::get('usuario', 'UsersController@edit');
-Route::put('usuario/{id}', 'UsersController@update');
+Route::get('usuario/index', 'UsersController@index');// feito
+Route::post('usuario/store', 'UsersController@store');//fazendo
+Route::get('usuario/show/{id}', 'UsersController@show');//feito
+Route::delete('usuario/delete/{id}', 'UsersController@destroy');
+Route::get('usuario/edit', 'UsersController@edit');
+Route::put('usuario/update/{id}', 'UsersController@update');
 
 
 
