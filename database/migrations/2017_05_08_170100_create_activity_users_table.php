@@ -21,13 +21,13 @@ class CreateActivityUsersTable extends Migration
             $table->dateTime('data_saida');
 
             $table->integer('id_users')->unsigned();
-            $table->foreign('id_users')->references('id')->on('users');
+            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
 
             $table->integer('id_activities')->unsigned();
-            $table->foreign('id_activities')->references('id')->on('activities');
+            $table->foreign('id_activities')->references('id')->on('activities')->onDelete('cascade');
 
             $table->integer('id_type_activity_user')->unsigned();
-            $table->foreign('id_type_activity_user')->references('id')->on('type_users');
+            $table->foreign('id_type_activity_user')->references('id')->on('type_users')->onDelete('cascade');
 
             $table->timestamps();
 		});

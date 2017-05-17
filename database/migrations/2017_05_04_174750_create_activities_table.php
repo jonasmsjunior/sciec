@@ -25,9 +25,9 @@ class CreateActivitiesTable extends Migration
             $table->dateTime('data_inicio');
             $table->dateTime('data_conclusao');
             $table->integer('id_evento')->unsigned();
-            $table->foreign('id_evento')->references('id')->on('events');
+            $table->foreign('id_evento')->references('id')->on('events')->onDelete('cascade');
             $table->integer('id_tipo_atividade')->unsigned();
-            $table->foreign('id_tipo_atividade')->references('id')->on('type_activities');
+            $table->foreign('id_tipo_atividade')->references('id')->on('type_activities')->onDelete('cascade');
             $table->timestamps();
 		});
 	}
