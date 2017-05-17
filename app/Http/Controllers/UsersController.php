@@ -47,6 +47,7 @@ class UsersController extends Controller
         if (request()->wantsJson()) {
 
             return response()->json([
+                'msg' => 'consulta efetuada com sucesso',
                 'data' => $users,
             ]);
         }
