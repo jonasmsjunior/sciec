@@ -16,8 +16,15 @@ Route::get('/', function () {
 });
 
 Route::get('usuario', 'UsersController@index');
+Route::post('usuario','UsersController@store');
+Route::get('usuario/{id}','UsersController@show');
+Route::delete('usuario/{id}','UsersController@destroy');
+Route::put('usuario/{id}','UsersController@update');
+
+
 
 
 Route::get('teste', function () {
     return \App\Entities\User::all();
 });
+

@@ -14,7 +14,6 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\Entities\User::class, function (Faker\Generator $faker) {
     static $password;
-
     return [
         'name' => $faker->name,
         'password' => $password ?: $password = bcrypt('secret'),
@@ -28,8 +27,6 @@ $factory->define(App\Entities\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Entities\UserTypeUser::class, function (Faker\Generator $faker) {
-
-
     return [
         'id_user' => $faker->numberBetween(1,100),
         'id_type_user' => $faker->numberBetween(1,5),
@@ -50,7 +47,7 @@ $factory->define(App\Entities\TypeUser::class, function (Faker\Generator $faker)
 //legal
 
 
-$factory->define(sciec\Models\Events::class, function (Faker\Generator $faker) {
+$factory->define(App\Entities\Events::class, function (Faker\Generator $faker) {
     return [
         'nome' => $faker->name,
         'descricao' => $faker->sentence,
@@ -60,14 +57,14 @@ $factory->define(sciec\Models\Events::class, function (Faker\Generator $faker) {
         'data_conclusao'=> $faker->dateTimeAD,
     ];
 });
-$factory->define(sciec\Models\TypeActivity::class, function (Faker\Generator $faker) {
+$factory->define(App\Entities\TypeActivity::class, function (Faker\Generator $faker) {
     return [
         'nome' => $faker->name,
         'descricao' => $faker->sentence,
         'status'=> $faker->numberBetween(0,1),
     ];
 });
-$factory->define(sciec\Models\Activity::class, function (Faker\Generator $faker) {
+$factory->define(App\Entities\Activity::class, function (Faker\Generator $faker) {
     return [
         'nome' => $faker->name,
         'descricao' => $faker->sentence,
@@ -109,16 +106,13 @@ $factory->define(App\Entities\Activity::class, function (Faker\Generator $faker)
         'cod_inscritos'=> $faker->numberBetween(),
         'data_inicio'=> $faker->dateTime,
         'data_conclusao'=> $faker->dateTime,
-        'id_evento'=> $faker->numberBetween(0,100),
-        'id_tipo_atividade'=> $faker->numberBetween(0,100),
+        'id_evento'=> $faker->numberBetween(1,100),
+        'id_tipo_atividade'=> $faker->numberBetween(1,100),
 
     ];
-}); //marques
+});
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\Entities\TypeActivityUser::class, function (Faker\Generator $faker) {
-    static $password;
-
     return [
         'nome' => $faker->sentence,
         'descricao' => $faker->sentence,
@@ -138,7 +132,7 @@ $factory->define(App\Entities\ActivityUser::class, function (Faker\Generator $fa
         'id_activities' => $faker->numberBetween(1,10),
         'id_type_activity_user' => $faker->numberBetween(1,5),
     ];
-});//guilherme
+});
 
 $factory->define(App\Entities\Article::class, function (Faker\Generator $faker) {
 
@@ -167,16 +161,25 @@ $factory->define(App\Entities\Participation::class, function (Faker\Generator $f
 $factory->define(App\Entities\UserEvent::class, function (Faker\Generator $faker) {
 
     return [
-        'id_users' => $faker->numberBetween(1,100),
-        'id_evento'=> $faker->numberBetween(0,100),
-        'id_articles' => $faker->numberBetween(0,100),
-        'id_participation' => $faker->numberBetween(0,100),
+        'id_users' => rand(1,100),
+        'id_evento'=> rand(1,100),
+        'id_articles' => rand(1,100),
+        'id_participation' => rand(1,100),
         'status' => $faker->boolean,
     ];
-});// romulo
+});
+
+$factory->define(App\Entities\CourseEvents::class, function (Faker\Generator $faker) {
+
+    return [
+        'id_cursos' => rand(1,10),
+        'id_eventos' => rand(1,10),
+    ];
+});
+
+
+
 $factory->define(App\Entities\Instution::class, function (Faker\Generator $faker) {
-
-
     return [
         'nome' => $faker->name,
         'site' => $faker->sentence,
@@ -195,16 +198,7 @@ $factory->define(App\Entities\Course::class, function (Faker\Generator $faker) {
         'descricao' => $faker->sentence,
         'status' => $faker->boolean,
         'telefone' => $faker->phoneNumber,
-        'id_instutions' => $faker->numberBetween(0,10),
+        'id_instutions' => $faker->numberBetween(1,10),
     ];
 });
-
-$factory->define(App\Entities\CourseEvents::class, function (Faker\Generator $faker) {
-
-
-    return [
-         'id_cursos' => $faker->numberBetween(0,10),
-         'id_eventos' => $faker->numberBetween(0,5),
-    ];
-});//alvaro
 
