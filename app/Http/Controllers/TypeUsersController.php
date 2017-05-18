@@ -50,7 +50,8 @@ class TypeUsersController extends Controller
             ]);
         }
 
-        return view('typeUsers.index', compact('typeUsers'));
+        //return view('typeUsers.index', compact('typeUsers'));
+        return $typeUsers;
     }
 
     /**
@@ -111,7 +112,8 @@ class TypeUsersController extends Controller
             ]);
         }
 
-        return view('typeUsers.show', compact('typeUser'));
+       // return view('typeUsers.show', compact('typeUser'));
+        return $typeUser;
     }
 
 
@@ -127,7 +129,8 @@ class TypeUsersController extends Controller
 
         $typeUser = $this->repository->find($id);
 
-        return view('typeUsers.edit', compact('typeUser'));
+       // return view('typeUsers.edit', compact('typeUser'));
+        return $typeUser;
     }
 
 
