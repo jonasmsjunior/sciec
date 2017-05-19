@@ -40,12 +40,12 @@ Route::put('atividade/config/update/{id}', 'ActivitiesController@update');
 
 //Tipo de actividade usuario
 
-Route::get('atividade/config/index', 'ActivitiesController@index');// feito
-Route::post('atividade/config/store', 'ActivitiesController@store');//fazendo
-Route::get('atividade/config/show/{id}', 'ActivitiesController@show');//feito
-Route::delete('atividade/config/delete/{id}', 'ActivitiesController@destroy');//feito obs: mudar para exclusao logica
-Route::get('atividade/config/edit/{id}', 'ActivitiesController@edit');
-Route::put('atividade/config/update/{id}', 'ActivitiesController@update');
+Route::get('usuario/atividade/config/index', 'ActivitiesController@index');// feito
+Route::post('usuario/atividade/config/store', 'ActivitiesController@store');//fazendo
+Route::get('usuario/atividade/config/show/{id}', 'ActivitiesController@show');//feito
+Route::delete('usuario/atividade/config/delete/{id}', 'ActivitiesController@destroy');//feito obs: mudar para exclusao logica
+Route::get('usuario/atividade/config/edit/{id}', 'ActivitiesController@edit');
+Route::put('usuario/atividade/config/update/{id}', 'ActivitiesController@update');
 
 //Instituições
 
