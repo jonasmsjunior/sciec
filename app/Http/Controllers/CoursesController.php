@@ -56,7 +56,8 @@ class CoursesController extends Controller
             ]);
         }
 
-        return view('courses.index', compact('courses'));
+        //return view('courses.index', compact('courses'));
+        return $courses;
     }
 
     /**
@@ -94,7 +95,8 @@ class CoursesController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $course;
         }
     }
 
@@ -117,7 +119,8 @@ class CoursesController extends Controller
             ]);
         }
 
-        return view('courses.show', compact('course'));
+        //return view('courses.show', compact('course'));
+        return $course;
     }
 
 
@@ -133,7 +136,8 @@ class CoursesController extends Controller
 
         $course = $this->repository->find($id);
 
-        return view('courses.edit', compact('course'));
+        //return view('courses.edit', compact('course'));
+        return $course;
     }
 
 
@@ -175,7 +179,8 @@ class CoursesController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+           // return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $course;
         }
     }
 

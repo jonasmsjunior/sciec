@@ -50,7 +50,8 @@ class TypeUsersController extends Controller
             ]);
         }
 
-        return view('typeUsers.index', compact('typeUsers'));
+        //return view('typeUsers.index', compact('typeUsers'));
+        return $typeUsers;
     }
 
     /**
@@ -65,7 +66,7 @@ class TypeUsersController extends Controller
 
         try {
 
-            $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
+            //$this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
 
             $typeUser = $this->repository->create($request->all());
 
@@ -87,8 +88,8 @@ class TypeUsersController extends Controller
                     'message' => $e->getMessageBag()
                 ]);
             }
-
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $typeUser;
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
         }
     }
 
@@ -111,7 +112,8 @@ class TypeUsersController extends Controller
             ]);
         }
 
-        return view('typeUsers.show', compact('typeUser'));
+       // return view('typeUsers.show', compact('typeUser'));
+        return $typeUser;
     }
 
 
@@ -127,7 +129,8 @@ class TypeUsersController extends Controller
 
         $typeUser = $this->repository->find($id);
 
-        return view('typeUsers.edit', compact('typeUser'));
+       // return view('typeUsers.edit', compact('typeUser'));
+        return $typeUser;
     }
 
 

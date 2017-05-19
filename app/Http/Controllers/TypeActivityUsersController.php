@@ -50,7 +50,8 @@ class TypeActivityUsersController extends Controller
             ]);
         }
 
-        return view('typeActivityUsers.index', compact('typeActivityUsers'));
+        //return view('typeActivityUsers.index', compact('typeActivityUsers'));
+        return $typeActivityUsers;
     }
 
     /**
@@ -88,7 +89,8 @@ class TypeActivityUsersController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $typeActivityUser;
         }
     }
 
@@ -111,7 +113,8 @@ class TypeActivityUsersController extends Controller
             ]);
         }
 
-        return view('typeActivityUsers.show', compact('typeActivityUser'));
+        //return view('typeActivityUsers.show', compact('typeActivityUser'));
+        return $typeActivityUser;
     }
 
 
@@ -127,7 +130,8 @@ class TypeActivityUsersController extends Controller
 
         $typeActivityUser = $this->repository->find($id);
 
-        return view('typeActivityUsers.edit', compact('typeActivityUser'));
+        //return view('typeActivityUsers.edit', compact('typeActivityUser'));
+        return $typeActivityUser;
     }
 
 
@@ -169,7 +173,8 @@ class TypeActivityUsersController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $typeActivityUser;
         }
     }
 

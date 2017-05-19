@@ -17,10 +17,10 @@ class CreateUserTypeUsersTable extends Migration
             $table->boolean('status');
 
             $table->integer('id_user')->unsigned();
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
 
             $table->integer('id_type_user')->unsigned();
-            $table->foreign('id_type_user')->references('id')->on('type_users');
+            $table->foreign('id_type_user')->references('id')->on('type_users')->onDelete('cascade');
             $table->timestamps();
 		});
 	}

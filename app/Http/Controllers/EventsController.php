@@ -50,7 +50,8 @@ class EventsController extends Controller
             ]);
         }
 
-        return view('events.index', compact('events'));
+        //return view('events.index', compact('events'));
+        return $events;
     }
 
     /**
@@ -88,7 +89,8 @@ class EventsController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $event;
         }
     }
 
@@ -111,7 +113,8 @@ class EventsController extends Controller
             ]);
         }
 
-        return view('events.show', compact('event'));
+        //return view('events.show', compact('event'));
+        return $event;
     }
 
 
@@ -127,7 +130,8 @@ class EventsController extends Controller
 
         $event = $this->repository->find($id);
 
-        return view('events.edit', compact('event'));
+        //return view('events.edit', compact('event'));
+        return $event;
     }
 
 
@@ -169,7 +173,8 @@ class EventsController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $event;
         }
     }
 

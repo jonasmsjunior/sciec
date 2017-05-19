@@ -50,7 +50,8 @@ class ParticipationsController extends Controller
             ]);
         }
 
-        return view('participations.index', compact('participations'));
+        //return view('participations.index', compact('participations'));
+        return $participations;
     }
 
     /**
@@ -88,7 +89,8 @@ class ParticipationsController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $participation;
         }
     }
 
@@ -111,7 +113,8 @@ class ParticipationsController extends Controller
             ]);
         }
 
-        return view('participations.show', compact('participation'));
+        //return view('participations.show', compact('participation'));
+        return $participation;
     }
 
 
@@ -127,7 +130,8 @@ class ParticipationsController extends Controller
 
         $participation = $this->repository->find($id);
 
-        return view('participations.edit', compact('participation'));
+        //return view('participations.edit', compact('participation'));
+        return $participation;
     }
 
 
@@ -169,7 +173,8 @@ class ParticipationsController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $participation;
         }
     }
 

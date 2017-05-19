@@ -15,11 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('usuario', 'UsersController@index');
+Route::post('usuario','UsersController@store');
+Route::get('usuario/{id}','UsersController@show');
+Route::delete('usuario/{id}','UsersController@destroy');
+Route::put('usuario/{id}','UsersController@update');
 
 
-Route::get('curso', 'CoursesController@index');
-Route::get('curso/{id}/eventos','CoursesController@eventos');
-Route::post('curso','CoursesController@store');
-Route::get('curso/{id}','CoursesController@show');
-Route::delete('curso/{id}','CoursesController@destroy');
-Route::put('curso/{id}','CoursesController@update');
+
+
+Route::get('teste', function () {
+    return \App\Entities\User::all();
+});
+

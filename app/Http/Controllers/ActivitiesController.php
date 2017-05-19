@@ -50,7 +50,8 @@ class ActivitiesController extends Controller
             ]);
         }
 
-        return view('activities.index', compact('activities'));
+        //return view('activities.index', compact('activities'));
+        return $activities;
     }
 
     /**
@@ -88,7 +89,8 @@ class ActivitiesController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $activity;
         }
     }
 
@@ -111,7 +113,8 @@ class ActivitiesController extends Controller
             ]);
         }
 
-        return view('activities.show', compact('activity'));
+        //return view('activities.show', compact('activity'));
+        return $activity;
     }
 
 
@@ -127,7 +130,8 @@ class ActivitiesController extends Controller
 
         $activity = $this->repository->find($id);
 
-        return view('activities.edit', compact('activity'));
+        //return view('activities.edit', compact('activity'));
+        return $activity;
     }
 
 
@@ -169,7 +173,8 @@ class ActivitiesController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+           // return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $activity;
         }
     }
 
@@ -194,5 +199,6 @@ class ActivitiesController extends Controller
         }
 
         return redirect()->back()->with('message', 'Activity deleted.');
+
     }
 }

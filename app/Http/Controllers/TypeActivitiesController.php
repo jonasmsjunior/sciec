@@ -50,7 +50,8 @@ class TypeActivitiesController extends Controller
             ]);
         }
 
-        return view('typeActivities.index', compact('typeActivities'));
+        //return view('typeActivities.index', compact('typeActivities'));
+        return $typeActivities;
     }
 
     /**
@@ -88,7 +89,8 @@ class TypeActivitiesController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $typeActivity;
         }
     }
 
@@ -111,7 +113,8 @@ class TypeActivitiesController extends Controller
             ]);
         }
 
-        return view('typeActivities.show', compact('typeActivity'));
+        //return view('typeActivities.show', compact('typeActivity'));
+        return $typeActivity;
     }
 
 
@@ -127,7 +130,8 @@ class TypeActivitiesController extends Controller
 
         $typeActivity = $this->repository->find($id);
 
-        return view('typeActivities.edit', compact('typeActivity'));
+        //return view('typeActivities.edit', compact('typeActivity'));
+        return $typeActivity;
     }
 
 
@@ -169,7 +173,8 @@ class TypeActivitiesController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $typeActivity;
         }
     }
 
@@ -194,5 +199,6 @@ class TypeActivitiesController extends Controller
         }
 
         return redirect()->back()->with('message', 'TypeActivity deleted.');
+
     }
 }
