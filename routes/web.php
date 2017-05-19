@@ -31,6 +31,7 @@ Route::delete('usuario/config/delete/{id}', 'TypeUsersController@destroy');//fei
 Route::get('usuario/config/edit/{id}', 'TypeUsersController@edit');
 Route::put('usuario/config/update/{id}', 'TypeUsersController@update');
 //Tipo de Atividade
+// (BindingResolutionException in Container.php line 873: Target [App\Repositories\ActivityRepository] is not instantiable while building [App\Http\Controllers\ActivitiesController].)
 Route::get('atividade/config/index', 'ActivitiesController@index');// feito
 Route::post('atividade/config/store', 'ActivitiesController@store');//fazendo
 Route::get('atividade/config/show/{id}', 'ActivitiesController@show');//feito
@@ -39,6 +40,7 @@ Route::get('atividade/config/edit/{id}', 'ActivitiesController@edit');
 Route::put('atividade/config/update/{id}', 'ActivitiesController@update');
 
 //Tipo de actividade usuario
+//(Target [App\Repositories\ActivityRepository] is not instantiable while building [App\Http\Controllers\ActivitiesController].)
 
 Route::get('usuario/atividade/config/index', 'ActivitiesController@index');// feito
 Route::post('usuario/atividade/config/store', 'ActivitiesController@store');//fazendo
@@ -48,6 +50,7 @@ Route::get('usuario/atividade/config/edit/{id}', 'ActivitiesController@edit');
 Route::put('usuario/atividade/config/update/{id}', 'ActivitiesController@update');
 
 //Instituições
+//(Class App\Entities\Instutions does not exist)
 
 Route::get('instituicao/index', 'InstutionsController@index');// feito
 Route::post('instituicao/store', 'InstutionsController@store');//fazendo
@@ -83,6 +86,7 @@ Route::get('artigo/edit/{id}', 'ArticlesController@edit');
 Route::put('artigo/update/{id}', 'ArticlesController@update');
 
 //Evento
+//(Target [App\Repositories\EventRepository] is not instantiable while building [App\Http\Controllers\EventsController].)
 
 Route::get('evento/index', 'EventsController@index');// feito
 Route::post('evento/store', 'EventsController@store');//fazendo
@@ -92,6 +96,7 @@ Route::get('evento/edit/{id}', 'EventsController@edit');
 Route::put('evento/update/{id}', 'EventsController@update');
 
 //Atividade
+//(Target [App\Repositories\ActivityRepository] is not instantiable while building [App\Http\Controllers\ActivitiesController].)
 
 Route::get('atividade/index', 'ActivitiesController@index');// feito
 Route::post('atividade/store', 'ActivitiesController@store');//fazendo
