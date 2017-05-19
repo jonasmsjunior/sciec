@@ -38,7 +38,7 @@ Route::delete('atividade/config/delete/{id}', 'ActivitiesController@destroy');//
 Route::get('atividade/config/edit/{id}', 'ActivitiesController@edit');
 Route::put('atividade/config/update/{id}', 'ActivitiesController@update');
 
-//Tipo de actividade usuario*
+//Tipo de actividade usuario
 
 Route::get('atividade/config/index', 'ActivitiesController@index');// feito
 Route::post('atividade/config/store', 'ActivitiesController@store');//fazendo
@@ -47,7 +47,7 @@ Route::delete('atividade/config/delete/{id}', 'ActivitiesController@destroy');//
 Route::get('atividade/config/edit/{id}', 'ActivitiesController@edit');
 Route::put('atividade/config/update/{id}', 'ActivitiesController@update');
 
-//Instituições *
+//Instituições
 
 Route::get('instituicao/index', 'InstutionsController@index');// feito
 Route::post('instituicao/store', 'InstutionsController@store');//fazendo
@@ -56,7 +56,7 @@ Route::delete('instituicao/delete/{id}', 'InstutionsController@destroy');//feito
 Route::get('instituicao/edit/{id}', 'InstutionsController@edit');
 Route::put('instituicao/update/{id}', 'InstutionsController@update');
 
-//Course *
+//Course
 Route::get('curso/index', 'CoursesController@index');// feito
 Route::post('curso/store', 'CoursesController@store');//fazendo
 Route::get('curso/show/{id}', 'CoursesController@show');//feito
@@ -64,7 +64,7 @@ Route::delete('curso/delete/{id}', 'CoursesController@destroy');//feito obs: mud
 Route::get('curso/edit/{id}', 'CoursesController@edit');
 Route::put('curso/update/{id}', 'CoursesController@update');
 
-//Participação *
+//Participação
 
 Route::get('participacao/index', 'ParticipationsController@index');// feito
 Route::post('participacao/store', 'ParticipationsController@store');//fazendo
@@ -73,7 +73,7 @@ Route::delete('participacao/delete/{id}', 'ParticipationsController@destroy');//
 Route::get('participacao/edit/{id}', 'ParticipationsController@edit');
 Route::put('participacao/update/{id}', 'ParticipationsController@update');
 
-//Artigos *
+//Artigos
 
 Route::get('artigo/index', 'ArticlesController@index');// feito
 Route::post('artigo/store', 'ArticlesController@store');//fazendo
@@ -82,7 +82,7 @@ Route::delete('artigo/delete/{id}', 'ArticlesController@destroy');//feito obs: m
 Route::get('artigo/edit/{id}', 'ArticlesController@edit');
 Route::put('artigo/update/{id}', 'ArticlesController@update');
 
-//Evento *
+//Evento
 
 Route::get('evento/index', 'EventsController@index');// feito
 Route::post('evento/store', 'EventsController@store');//fazendo
@@ -91,7 +91,7 @@ Route::delete('evento/delete/{id}', 'EventsController@destroy');//feito obs: mud
 Route::get('evento/edit/{id}', 'EventsController@edit');
 Route::put('evento/update/{id}', 'EventsController@update');
 
-//Atividade *
+//Atividade
 
 Route::get('atividade/index', 'ActivitiesController@index');// feito
 Route::post('atividade/store', 'ActivitiesController@store');//fazendo

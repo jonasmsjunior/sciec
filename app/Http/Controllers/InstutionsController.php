@@ -50,7 +50,8 @@ class InstutionsController extends Controller
             ]);
         }
 
-        return view('instutions.index', compact('instutions'));
+        //return view('instutions.index', compact('instutions'));
+        return $instutions;
     }
 
     /**
@@ -88,7 +89,8 @@ class InstutionsController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $instution;
         }
     }
 
@@ -111,7 +113,8 @@ class InstutionsController extends Controller
             ]);
         }
 
-        return view('instutions.show', compact('instution'));
+        //return view('instutions.show', compact('instution'));
+        return $instution;
     }
 
 
@@ -127,7 +130,8 @@ class InstutionsController extends Controller
 
         $instution = $this->repository->find($id);
 
-        return view('instutions.edit', compact('instution'));
+        //return view('instutions.edit', compact('instution'));
+        return $instution;
     }
 
 
@@ -169,7 +173,8 @@ class InstutionsController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $instution;
         }
     }
 

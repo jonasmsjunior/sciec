@@ -50,7 +50,8 @@ class ArticlesController extends Controller
             ]);
         }
 
-        return view('articles.index', compact('articles'));
+        //return view('articles.index', compact('articles'));
+        return $articles;
     }
 
     /**
@@ -88,7 +89,8 @@ class ArticlesController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $article;
         }
     }
 
@@ -111,7 +113,8 @@ class ArticlesController extends Controller
             ]);
         }
 
-        return view('articles.show', compact('article'));
+        //return view('articles.show', compact('article'));
+        return $article;
     }
 
 
@@ -127,7 +130,8 @@ class ArticlesController extends Controller
 
         $article = $this->repository->find($id);
 
-        return view('articles.edit', compact('article'));
+        //return view('articles.edit', compact('article'));
+        return $article;
     }
 
 
@@ -169,7 +173,8 @@ class ArticlesController extends Controller
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            //return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return $article;
         }
     }
 
