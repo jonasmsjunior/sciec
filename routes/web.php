@@ -30,7 +30,7 @@ Route::get('usuario/config/show/{id}', 'TypeUsersController@show');//feito
 Route::delete('usuario/config/delete/{id}', 'TypeUsersController@destroy');//feito obs: mudar para exclusao logica
 Route::get('usuario/config/edit/{id}', 'TypeUsersController@edit');
 Route::put('usuario/config/update/{id}', 'TypeUsersController@update');
-//Tipo de Atividade *
+//Tipo de Atividade
 Route::get('atividade/config/index', 'ActivitiesController@index');// feito
 Route::post('atividade/config/store', 'ActivitiesController@store');//fazendo
 Route::get('atividade/config/show/{id}', 'ActivitiesController@show');//feito
