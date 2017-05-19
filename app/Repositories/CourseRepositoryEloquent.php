@@ -7,6 +7,7 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use App\Repositories\courseRepository;
 use App\Entities\Course;
 use App\Validators\CourseValidator;
+use App\Presenters\CoursePresenter;
 
 /**
  * Class CourseRepositoryEloquent
@@ -42,5 +43,10 @@ class CourseRepositoryEloquent extends BaseRepository implements CourseRepositor
     public function boot()
     {
         $this->pushCriteria(app(RequestCriteria::class));
+    }
+
+    public function presenter()
+    {
+        return CoursePresenter::class;
     }
 }

@@ -13,3 +13,5 @@ class UserEventValidator extends LaravelValidator
         ValidatorInterface::RULE_UPDATE => [],
    ];
 }
+
+

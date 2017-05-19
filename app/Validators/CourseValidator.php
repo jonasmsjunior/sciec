@@ -9,7 +9,8 @@ class CourseValidator extends LaravelValidator
 {
 
     protected $rules = [
-        ValidatorInterface::RULE_CREATE => [],
+        ValidatorInterface::RULE_CREATE => ['nome' => 'required|max:2',],
         ValidatorInterface::RULE_UPDATE => [],
    ];
+
 }

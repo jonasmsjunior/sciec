@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Presenters\CoursePresenter;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 use App\Repositories\course_eventsRepository;
@@ -43,4 +44,6 @@ class CourseEventsRepositoryEloquent extends BaseRepository implements CourseEve
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
+
+
 }

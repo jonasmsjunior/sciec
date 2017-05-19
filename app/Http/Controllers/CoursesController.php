@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Entities\Course;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -38,6 +39,11 @@ class CoursesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function eventos($id){
+        $curso = $this->repository->find($id);
+
+        return $curso->Eventies;
+    }
     public function index()
     {
         $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
@@ -60,7 +66,7 @@ class CoursesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(CourseCreateRequest $request)
+    public function store(Request $request)
     {
 
         try {
